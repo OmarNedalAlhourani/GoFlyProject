@@ -1,0 +1,36 @@
+﻿@model IEnumerable<GoFly.BL.Models.HotelPage.TravelBooking>
+
+
+
+<div id="fh5co-tours" class="fh5co-section-gray">
+	<div class="container">
+		<div class="row">
+<div class="row row-bottom-padded-md">
+<div class="row">
+	
+		
+	@foreach (var item in Model)
+	{
+		<div class="col-md-12 animate-box">
+			<h2 class="heading-title">Travel Booking guide to book a perfect hotel</h2>
+
+	<div class="col-md-6 animate-box">
+		<p>@item.TravelBookingDescription</p>
+		<a href="#">Read More <i class="icon-arrow-right22"></i></a>
+	</div>
+							<div class="col-md-6 animate-box">
+								<img class="img-responsive" src="~/images/@item.ImagePath" alt="travel">
+							</div>
+		</div>
+	}
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+	

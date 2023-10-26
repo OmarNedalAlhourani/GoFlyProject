@@ -1,0 +1,72 @@
+﻿@model IEnumerable<GoFly.BL.Models.HotelPage.HostelDestination>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table table-hover">
+
+
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HostelDestinationName)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.HostelDestinationDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HostelDestinationPrise)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDleted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelDestinationName)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelDestinationDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HostelDestinationPrise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDleted)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.HostelDestinationId" class="btn btn-warning btn-sm">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.HostelDestinationId" class="btn btn-primary btn-sm">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.HostelDestinationId" class="btn btn-danger btn-sm">Delete</a>
+
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

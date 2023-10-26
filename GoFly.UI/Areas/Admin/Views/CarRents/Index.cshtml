@@ -1,0 +1,81 @@
+﻿@model IEnumerable<GoFly.BL.Models.CarPage.CarRent>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table table-hover">
+
+
+    <thead class="table table-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CarRentTitel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriseDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriseWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriseMonth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDleted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarRentTitel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriseDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriseWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriseMonth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tax)
+            </td>
+            <td>
+                <img src="~/images/@item.ImagePath" width="70" >
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDleted)
+            </td>
+            <td>
+               
+                    <a asp-action="Edit" asp-route-id="@item.CarRentId" class="btn btn-warning btn-sm">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CarRentId" class="btn btn-primary btn-sm">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CarRentId" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

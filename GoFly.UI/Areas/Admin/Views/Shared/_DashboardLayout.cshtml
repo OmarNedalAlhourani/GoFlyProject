@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+
+
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<title>Bootstrap Admin Theme v3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="~/dashboard/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- styles -->
+	<link href="~/dashboard/css/styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<!-- Logo -->
+					<div class="logo">
+						<h1><a href="index.html"> Admin </a></h1>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group form">
+								<input type="text" class="form-control" placeholder="Search...">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button">Search</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="navbar navbar-inverse" role="banner">
+						<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+									<ul class="dropdown-menu animated fadeInUp">
+										<li><a href="profile.html">Profile</a></li>
+										<li><a href="login.html">Logout</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="sidebar content-box" style="display: block;">
+					<ul class="nav">
+						<!-- Main menu -->
+
+						<li class="current"><a asp-controller="Dashboard" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Dashboard</a></li>
+
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-list"></i> Home Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								
+								<li><a asp-controller="HotTour" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> HotTour</a></li>
+								<li><a asp-controller="Plan" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Plan</a></li>
+								<li><a asp-controller="PopularDestination" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> PopularDestination</a></li>
+								<li><a asp-controller="Blog" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Blog</a></li>
+							</ul>
+						</li>
+
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-home"></i> Hotel Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+
+								<li><a asp-controller="HostelDestinations" asp-action="Index"><i class="glyphicon glyphicon-home"></i> Hostel Destination</a></li>
+								<li><a asp-controller="TravelBookings" asp-action="Index"><i class="glyphicon glyphicon-home"></i> Travel Bookings</a></li>
+							</ul>
+						</li>
+
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-lock"></i>Car Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a asp-controller="CarRents" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Car Rent</a></li>
+
+							</ul>
+						</li>
+						
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-lock"></i>Vacation Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a asp-controller="TouristSpots" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Tourist Spots</a></li>
+
+							</ul>
+						</li>
+						
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-lock"></i>Contact Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a asp-controller="OurAddresses" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Our Addresses</a></li>
+								<li><a asp-controller="Message" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Message</a></li>
+
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-lock"></i>Flight Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a asp-controller="TodayFlights" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Today Flights</a></li>
+								<li><a asp-controller="Deals" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Deals</a></li>
+
+							</ul>
+						</li>
+						
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-lock"></i>Blog Page
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a asp-controller="OurBlogs" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Our Blogs</a></li>
+
+							</ul>
+						</li>
+						
+						<li><a asp-controller="Account" asp-action="RoleList"><i class="glyphicon glyphicon-pencil"></i> Role</a></li>
+						<li><a asp-controller="ScrolMenus" asp-action="Index"><i class="glyphicon glyphicon-tasks"></i> Scrol Menu</a></li>
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-list"></i> Pages
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a href="login.html">Login</a></li>
+								<li><a href="signup.html">Signup</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-10">
+
+				<div>
+					@RenderBody()
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+
+			<div class="copy text-center">
+				Copyright 2014 <a href='#'>Website</a>
+			</div>
+
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="~/dashboard/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/dashboard/js/custom.js"></script>
+
+</body>
+</html>
+
+

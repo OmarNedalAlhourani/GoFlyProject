@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GoFly.BL.Models.CarPage.CarRent>
+
+
+<div id="fh5co-car" class="fh5co-section-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+				<h3>Car Rent In U.S.</h3>
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+			</div>
+		</div>
+
+		<div class="row row-bottom-padded-md">
+		@foreach (var item in Model)
+		{
+				<div class="col-md-6 animate-box">
+
+
+				<div class="car">
+					<div class="one-4">
+						<h3>@item.CarRentTitel</h3>
+						<span class="price">$@item.PriseDay<small> / day</small></span>
+						<span class="price">$@item.PriseWeek<small> / week</small></span>
+						<span class="price">$@item.PriseMonth<small> / mos.</small></span>
+						<span class="price">$@item.Tax<small> Total (Tax incl.)</small></span>
+					</div>
+
+							<div class="one-1"  style="background-image: url(/images/@item.ImagePath);">
+								</div>
+					</div>
+				
+		
+		
+			</div>}
+
+		</div>
+	</div>
+</div>

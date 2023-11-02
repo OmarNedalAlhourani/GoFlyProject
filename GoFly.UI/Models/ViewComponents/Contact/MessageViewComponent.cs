@@ -13,7 +13,7 @@ namespace GoFly.UI.Models.ViewComponents.Contact
         }
         public IViewComponentResult Invoke()
         {
-            return View(_db.Messages.OrderByDescending(x => x.CreationDate));
+            return View(_db.Messages.OrderByDescending(x => x.Date));
         }
     }
 }

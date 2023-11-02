@@ -1,40 +1,37 @@
-﻿@model Message
+﻿@model  Message
 
-
-
-<form asp-action="CreateMessage" method="post">
-				<div class="row animate-box">
-
+ <form asp-action="CreateMessage" asp-controller="Home" method="post">
+	<div class="row animate-box">
 					
-					<div class="col-md-6">
-						<div class="row">
+		<div class="col-md-6">
+			<div class="row">
 
-							<div class="col-md-6">
-								<div class="form-group">
-							<input type="text" asp-for="UserName" class="form-control" placeholder="UserMassage">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-							<input type="email" asp-for="UserEmail" class="form-control" placeholder="UserEmail">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-						<textarea  asp-for="UserMassage" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="submit" value="Send Message" class="btn btn-primary">
-								</div>
-							</div>
-
+				<div class="col-md-6">
+					<div class="form-group">
+				<input type="text" asp-for="UserName" class="form-control" placeholder="UserMassage">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+				<input type="email" asp-for="UserEmail" class="form-control" placeholder="UserEmail">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+				<textarea  asp-for="UserMassage" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary">
+						</div>
+					</div>
+					 
 
 						</div>
 					</div>
 
-
+					
 				</div>
 			
 		</form>

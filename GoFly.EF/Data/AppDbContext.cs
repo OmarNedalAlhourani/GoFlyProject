@@ -4,8 +4,9 @@ using GoFly.BL.Models.ContactPage;
 using GoFly.BL.Models.FlightsPage;
 using GoFly.BL.Models.HomePage;
 using GoFly.BL.Models.HotelPage;
+using GoFly.BL.Models.Search;
 using GoFly.BL.Models.vacationPage;
-
+using GoFly.BL.Models.ViewModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,10 +22,11 @@ namespace GoFly.EF.Data
 
         // Define your DbSet properties here.
 
+
+
         public DbSet<HotTour> HotTours { get; set; }
         public DbSet<Plan> Plans { get; set; }
         public DbSet<PopularDestination> PopularDestinations { get; set; }
-        public DbSet<Menu> Menus { get; set; }
         public DbSet<Blog> Blogs { get; set; }
 
         public DbSet<HostelDestination> HostelDestinations { get; set; }
@@ -39,6 +41,9 @@ namespace GoFly.EF.Data
         public DbSet<Deal> Deals { get; set; }
 
         public DbSet<Message> Messages { get; set; }
+        public DbSet<SearchFlight> SearchFlights { get; set; }
+        public DbSet<SearchHotel> SearchHotels { get; set; }
+        public DbSet<SearchPackage> SearchPackages { get; set; }
 
     }
 }

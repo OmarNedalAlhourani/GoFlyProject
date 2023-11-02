@@ -46,8 +46,7 @@
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 									<ul class="dropdown-menu animated fadeInUp">
-										<li><a href="profile.html">Profile</a></li>
-										<li><a href="login.html">Logout</a></li>
+										<li><a asp-controller="Account" asp-action="Logout" asp-area="default">Log out</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -65,7 +64,7 @@
 					<ul class="nav">
 						<!-- Main menu -->
 
-						<li class="current"><a asp-controller="Dashboard" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Dashboard</a></li>
+						<li class="current"><a asp-controller="Dashboard" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-plane"></i> Dashboard</a></li>
 
 						<li class="submenu">
 							<a href="#">
@@ -75,10 +74,10 @@
 							<!-- Sub menu -->
 							<ul>
 								
-								<li><a asp-controller="HotTour" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> HotTour</a></li>
-								<li><a asp-controller="Plan" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Plan</a></li>
-								<li><a asp-controller="PopularDestination" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> PopularDestination</a></li>
-								<li><a asp-controller="Blog" asp-action="Index"><i class="glyphicon glyphicon-plane"></i> Blog</a></li>
+								<li><a asp-controller="HotTour" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-plane"></i> HotTour</a></li>
+								<li><a asp-controller="Plan" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-plane"></i> Plan</a></li>
+								<li><a asp-controller="PopularDestination" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-plane"></i> PopularDestination</a></li>
+								<li><a asp-controller="Blog" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-plane"></i> Blog</a></li>
 							</ul>
 						</li>
 
@@ -90,8 +89,8 @@
 							<!-- Sub menu -->
 							<ul>
 
-								<li><a asp-controller="HostelDestinations" asp-action="Index"><i class="glyphicon glyphicon-home"></i> Hostel Destination</a></li>
-								<li><a asp-controller="TravelBookings" asp-action="Index"><i class="glyphicon glyphicon-home"></i> Travel Bookings</a></li>
+								<li><a asp-controller="HostelDestinations" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-home"></i> Hostel Destination</a></li>
+								<li><a asp-controller="TravelBookings" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-home"></i> Travel Bookings</a></li>
 							</ul>
 						</li>
 
@@ -102,7 +101,7 @@
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a asp-controller="CarRents" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Car Rent</a></li>
+								<li><a asp-controller="CarRents" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Car Rent</a></li>
 
 							</ul>
 						</li>
@@ -114,7 +113,7 @@
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a asp-controller="TouristSpots" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Tourist Spots</a></li>
+								<li><a asp-controller="TouristSpots" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Tourist Spots</a></li>
 
 							</ul>
 						</li>
@@ -126,8 +125,8 @@
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a asp-controller="OurAddresses" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Our Addresses</a></li>
-								<li><a asp-controller="Message" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Message</a></li>
+								<li><a asp-controller="OurAddresses" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Our Addresses</a></li>
+								<li><a asp-controller="Message" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Message</a></li>
 
 							</ul>
 						</li>
@@ -138,8 +137,8 @@
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a asp-controller="TodayFlights" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Today Flights</a></li>
-								<li><a asp-controller="Deals" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Deals</a></li>
+								<li><a asp-controller="TodayFlights" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Today Flights</a></li>
+								<li><a asp-controller="Deals" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Deals</a></li>
 
 							</ul>
 						</li>
@@ -151,24 +150,29 @@
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a asp-controller="OurBlogs" asp-action="Index"><i class="glyphicon glyphicon-lock"></i> Our Blogs</a></li>
+								<li><a asp-controller="OurBlogs" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Our Blogs</a></li>
 
 							</ul>
 						</li>
 						
-						<li><a asp-controller="Account" asp-action="RoleList"><i class="glyphicon glyphicon-pencil"></i> Role</a></li>
-						<li><a asp-controller="ScrolMenus" asp-action="Index"><i class="glyphicon glyphicon-tasks"></i> Scrol Menu</a></li>
 						<li class="submenu">
 							<a href="#">
-								<i class="glyphicon glyphicon-list"></i> Pages
+								<i class="glyphicon glyphicon-lock"></i>Search Page
 								<span class="caret pull-right"></span>
 							</a>
 							<!-- Sub menu -->
 							<ul>
-								<li><a href="login.html">Login</a></li>
-								<li><a href="signup.html">Signup</a></li>
+								<li><a asp-controller="SearchFlight" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Search Flight</a></li>
+								<li><a asp-controller="SearchHotel" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Search Hotel</a></li>
+								<li><a asp-controller="SearchPackage" asp-action="Index" asp-area="admin"><i class="glyphicon glyphicon-lock"></i> Search Package</a></li>
+
 							</ul>
 						</li>
+					     
+							
+						<li ><a asp-area ="default" asp-controller="Account" asp-action="RoleList"><i class="glyphicon glyphicon-home"></i> Role List</a></li>
+
+
 					</ul>
 				</div>
 			</div>

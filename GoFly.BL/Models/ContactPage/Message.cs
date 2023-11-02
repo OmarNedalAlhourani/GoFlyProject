@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace GoFly.BL.Models.ContactPage
 {
-    public class Message:CommonProp
+    public class Message
     {
         public int MessageId { get; set; }
-        [Required]
         public string? UserName { get; set; }
-		[Required]
 
 		public string? UserEmail { get; set; }
-		[Required]
 
-		public string? UserMassage { get; set; } = null;
+		public string? UserMassage { get; set; } 
+
+        public DateTime Date { get; set; }
     }
 }

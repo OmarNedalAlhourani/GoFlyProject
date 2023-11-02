@@ -57,11 +57,11 @@ namespace GoFly.UI.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult CreateMessage(Message message)
+		public IActionResult CreateMessage([Bind("UserName,UserEmail,UserMessage")] Message message)
 		{
 			_db.Add(message);
 			_db.SaveChanges();
-			return View();
+			return RedirectToAction("Index","Message", new { area = "admin" });
 		}
 
 
